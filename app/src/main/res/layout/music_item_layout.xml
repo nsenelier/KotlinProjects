@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="20dp"
+    app:cardCornerRadius="25dp"
+    android:layout_margin="4dp"
+    android:id="@+id/music_album_cover">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/musicAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/music_cover_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="15dp"/>
+
+        <TextView
+            android:id="@+id/music_collection_name"
+            android:layout_width="241dp"
+            android:layout_height="22dp"
+            android:layout_margin="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/music_cover_item"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Collection Name" />
+
+        <TextView
+            android:id="@+id/music_track_price"
+            android:layout_width="32dp"
+            android:layout_height="19dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintBottom_toBottomOf="@+id/music_artist_name"
+            app:layout_constraintEnd_toEndOf="@+id/music_collection_name"
+            app:layout_constraintTop_toBottomOf="@+id/music_collection_name"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="Price" />
+
+        <TextView
+            android:id="@+id/music_artist_name"
+            android:layout_width="62dp"
+            android:layout_height="23dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginBottom="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/music_collection_name"
+            app:layout_constraintTop_toBottomOf="@+id/music_collection_name"
+            tools:text="Artist" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
