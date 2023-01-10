@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.musicapp'
+    namespace 'com.example.musictest'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.musicapp"
+        applicationId "com.example.musictest"
         minSdk 22
         targetSdk 33
         versionCode 1

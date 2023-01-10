@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.musictest.R
 import com.example.musictest.databinding.SearchFragmentBinding
+
 import com.example.musictest.model.view.adapter.MusicTabAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -37,7 +38,7 @@ class SearchFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View { //View?
         super.onCreateView(inflater, container, savedInstanceState)
         binding = SearchFragmentBinding.inflate(
             inflater,
@@ -76,7 +77,7 @@ class SearchFragment: Fragment() {
             tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     musicType = tab.text.toString()
-                    viewPager!!.currentItem = tab.position
+                    viewPager.currentItem = tab.position
                     Log.d(TAG, "onTabSelected: $musicType")
                     sendSearchParams()
                 }
